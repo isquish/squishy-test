@@ -7,7 +7,7 @@ function FindProxyForURL(url, host) {
       (host == "127.0.0.1")) {
       return "DIRECT";
     } else {
-      return "SOCKS5 127.0.0.1:9090;"; // SSH Tunnel
+      return "SOCKS5 127.0.0.1:9050;"; // tor proxy
     }
   }
 }
