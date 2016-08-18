@@ -5,7 +5,7 @@ function FindProxyForURL(url, host) {
     if ((host == "localhost") ||
       (host == "127.0.0.1") ||
       (shExpMatch(host, "192.168.*")) ||
-      (shExpMatch(host, "10.*"))) {
+      (isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0"))) {
       return "DIRECT";
     } else {
       return "SOCKS5 localhost:9090;"; // SquishynetHQ proxy
