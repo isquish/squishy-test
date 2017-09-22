@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
       (isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0"))) {
       return "DIRECT";
     } else {
-      return "SOCKS5 127.0.0.1:9050;"; // tor proxy
+      return "SOCKS5 127.0.0.1:8080;"; // tor proxy
     }
   }
 }
